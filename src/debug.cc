@@ -1,4 +1,4 @@
-// Copyright (C) 2009 by Florent Lamiraux, Thomas Moulard, CNRS.
+// Copyright (C) 2009, 2010 by Florent Lamiraux, Thomas Moulard, CNRS.
 //
 // This file is part of the hpp/walkfootplanner.
 //

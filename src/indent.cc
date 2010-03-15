@@ -1,4 +1,4 @@
-// Copyright (C) 2009 by Thomas Moulard, CNRS.
+// Copyright (C) 2009, 2010 by Thomas Moulard, CNRS.
 //
 // This file is part of the hppWalkFootPlanner.
 //

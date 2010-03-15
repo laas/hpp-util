@@ -1,5 +1,11 @@
 2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Update copyright.
+	* src/debug.cc,
+	* src/indent.cc: Here.
+
+2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Synchronize.
 	* build-aux: Synchronize.
 
