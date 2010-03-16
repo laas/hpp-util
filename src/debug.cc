@@ -22,6 +22,7 @@
 #include <fstream>
 #include <sstream>
 
+#include <boost/assign/list_of.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/foreach.hpp>
 #include <boost/format.hpp>
@@ -102,6 +103,12 @@ namespace hpp
       return res;
     }
 
+    Output::Output ()
+    {}
+
+    Output::~Output ()
+    {}
+
     std::ostream&
     Output::writePrefix (std::ostream& stream,
 			 const Channel& channel,
@@ -123,6 +130,9 @@ namespace hpp
 	subscribers_ (subscribers)
     {}
 
+    Channel::~Channel ()
+    {}
+
     const char*
     Channel::label () const
     {
@@ -142,6 +152,9 @@ namespace hpp
 
 
     ConsoleOutput::ConsoleOutput ()
+    {}
+
+    ConsoleOutput::~ConsoleOutput ()
     {}
 
     void
@@ -169,6 +182,9 @@ namespace hpp
       : filename (filename),
 	lastFunction (),
 	stream (makeLogFile (*this).c_str ())
+    {}
+
+    JournalOutput::~JournalOutput ()
     {}
 
     // package name is set to ``hpp'' here so that
@@ -208,31 +224,36 @@ namespace hpp
       writePrefix (stream, channel, file, line, function);
       stream << incindent << data << decindent << std::flush;
     }
+
+    Logging::Logging ()
+      : console (),
+	journal ("journal"),
+	benchmarkJournal ("benchmark"),
+	error
+	("ERROR", boost::assign::list_of<Output*> (&journal) (&console)),
+	warning
+	("WARNING", boost::assign::list_of<Output*> (&journal) (&console)),
+	notice
+	("NOTICE", boost::assign::list_of<Output*> (&journal) (&console)),
+	info
+	("INFO", boost::assign::list_of<Output*> (&journal)),
+	benchmark
+	("BENCHMARK", boost::assign::list_of<Output*> (&benchmarkJournal))
+    {}
+
+    Logging::~Logging ()
+    {}
+
   } // end of namespace debug.
 
 } // end of namespace hpp.
 
 
 // Global variables definitions.
-#include <boost/assign/list_of.hpp>
-
 namespace hpp
 {
   namespace debug
   {
-    using boost::assign::list_of;
-    // Default output.
-    ConsoleOutput console;
-    JournalOutput journal ("journal");
-    JournalOutput benchmarkJournal ("benchmark");
-
-    // Default channels.
-    Channel error ("ERROR", list_of<Output*> (&journal) (&console));
-    Channel warning ("WARNING", list_of<Output*> (&journal) (&console));
-    Channel notice ("NOTICE", list_of<Output*> (&journal) (&console));
-
-    Channel info ("INFO", list_of<Output*> (&journal));
-
-    Channel benchmark ("BENCHMARK", list_of<Output*> (&benchmarkJournal));
+    HPP_UTIL_DLLAPI Logging logging;
   } // end of namespace debug
 } // end of namespace hpp

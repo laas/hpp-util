@@ -83,6 +83,9 @@ namespace hpp
     class HPP_UTIL_DLLAPI Output
     {
     public:
+      explicit Output ();
+      ~Output ();
+
       virtual void
 	write (const Channel& channel,
 	       char const* file,
@@ -116,6 +119,7 @@ namespace hpp
 
       explicit Channel (char const* label,
 			const subscribers_t& subscribers);
+      ~Channel ();
 
       void write (char const* file,
 		  int line,
@@ -133,6 +137,8 @@ namespace hpp
     {
     public:
       explicit JournalOutput (std::string filename);
+      ~JournalOutput ();
+
       void write (const Channel& channel,
 		  char const* file,
 		  int line,
@@ -152,11 +158,42 @@ namespace hpp
     {
     public:
       explicit ConsoleOutput ();
+      ~ConsoleOutput ();
       void write (const Channel& channel,
 		  char const* file,
 		  int line,
 		  char const* function,
 		  const std::string& data);
+    };
+
+    /// \brief Logging class owns all channels and outputs.
+    class HPP_UTIL_DLLAPI Logging
+    {
+    public:
+      explicit Logging ();
+      ~Logging ();
+
+      /// \brief Logs to console (i.e. stderr).
+      ConsoleOutput console;
+      /// \brief Logs to main journal file (i.e. journal.XXX.log).
+      JournalOutput journal;
+      /// \brief Logs to benchmark journal file (i.e. benchmark.XXX.log).
+      JournalOutput benchmarkJournal;
+
+      /// \brief Fatal problems channel.
+      Channel error;
+
+      /// \brief Non-fatal problems channel.
+      Channel warning;
+
+      /// \brief User-oriented information.
+      Channel notice;
+
+      /// \brief Technical information and debugging.
+      Channel info;
+
+      /// \brief Benchmark information.
+      Channel benchmark;
     };
   } // end of namespace debug
 } // end of namespace hpp.
@@ -166,21 +203,8 @@ namespace hpp
 {
   namespace debug
   {
-    /// \brief Fatal problems channel.
-    extern HPP_UTIL_DLLAPI Channel error;
-
-    /// \brief Non-fatal problems channel.
-    extern HPP_UTIL_DLLAPI Channel warning;
-
-    /// \brief User-oriented information.
-    extern HPP_UTIL_DLLAPI Channel notice;
-
-    /// \brief Technical information and debugging.
-    extern HPP_UTIL_DLLAPI Channel info;
-
     /// \brief Benchmark information.
-    extern HPP_UTIL_DLLAPI Channel benchmark;
-
+    extern HPP_UTIL_DLLAPI Logging logging;
   } // end of namespace debug
 } // end of namespace hpp
 
@@ -203,7 +227,8 @@ namespace hpp
     using namespace ::hpp::debug;					\
     std::stringstream __ss;						\
     __ss << data << iendl;						\
-    channel.write ( __FILE__, __LINE__,	__PRETTY_FUNCTION__, __ss.str ()); \
+    logging.channel.write (__FILE__, __LINE__, __PRETTY_FUNCTION__,     \
+			   __ss.str ());				\
   } while (0)
 
 #  define hppDoutFatal(channel, data)					\
@@ -212,7 +237,8 @@ namespace hpp
     using namespace ::hpp::debug;					\
     std::stringstream __ss;						\
     __ss << data << iendl;						\
-    channel.write ( __FILE__, __LINE__,	__PRETTY_FUNCTION__, __ss.str ()); \
+    logging.channel.write ( __FILE__, __LINE__,	__PRETTY_FUNCTION__,	\
+			    __ss.str ());				\
     ::std::exit(EXIT_FAILURE);						\
   } while (1)
 

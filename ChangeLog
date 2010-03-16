@@ -1,3 +1,11 @@
+2010-03-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Fix static initialization fiasco.
+	* include/Makefile.am: Add forgotten file.
+	* include/hpp/util/debug.hh,
+	* src/debug.cc: Gathers all instances in the Logging
+	class to enforce initialization/destruction order.
+
 2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Update copyright.
