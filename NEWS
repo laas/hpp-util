@@ -1,4 +1,5 @@
                                                                 -*- outline -*-
 
-New in 0.1, ????:
+New in 0.1, 2010-04-21:
 * Import code for debug and benchs from hpp-walkfootplanner.
+* Add portable macro to support deprecation of functions, variables and types.

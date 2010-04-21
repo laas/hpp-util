@@ -1,5 +1,10 @@
 2010-04-21  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fill NEWS file.
+	* NEWS: Announce first release.
+
+2010-04-21  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add support for tagging functions/variables/types as deprecated.
 	* include/Makefile.am: Distribute new header.
 	* include/hpp/util/deprecated.hh: New.
