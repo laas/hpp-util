@@ -4,6 +4,7 @@ include $(top_srcdir)/build-aux/init.mk
 nobase_include_HEADERS =					\
 		hpp/util/config.hh				\
 		hpp/util/deprecated.hh				\
+		hpp/util/exception.hh				\
 		hpp/util/indent.hh				\
 		hpp/util/debug.hh				\
 		hpp/util/portability.hh				\

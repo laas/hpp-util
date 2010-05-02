@@ -19,6 +19,7 @@ lib_LTLIBRARIES = libhpp-util.la
 
 libhpp_util_la_SOURCES = 			\
 	debug.cc				\
+	exception.cc				\
 	indent.cc				\
 	timer.cc
 

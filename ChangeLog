@@ -1,3 +1,16 @@
+2010-05-02  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add root exception class for HPP.
+
+	Add an Exception class in HPP. All used exceptions
+	should inherit this one to allow easy catching
+	of all HPP exceptions.
+
+	* include/Makefile.am: Distribute new file.
+	* include/hpp/util/exception.hh: New.
+	* src/Makefile.am: Compile new source.
+	* src/exception.cc: New.
+
 2010-04-21  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Fill NEWS file.
