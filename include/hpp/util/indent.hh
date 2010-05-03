@@ -8,8 +8,8 @@
 //
 // See the COPYING file for more information.
 
-#ifndef HPPWALKFOOTPLANNER_INDENT_HH
-# define HPPWALKFOOTPLANNER_INDENT_HH
+#ifndef HPP_UTIL_INDENT_HH
+# define HPP_UTIL_INDENT_HH
 # include <iosfwd>
 
 # include <hpp/util/config.hh>
@@ -41,4 +41,4 @@ namespace hpp
 
 } // end of namespace hpp.
 
-#endif // !HPPWALKFOOTPLANNER_INDENT_HH
+#endif // !HPP_UTIL_INDENT_HH

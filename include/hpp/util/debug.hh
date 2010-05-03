@@ -8,8 +8,8 @@
 //
 // See the COPYING file for more information.
 
-#ifndef HPPWALKFOOTPLANNER_DEBUG_HH
-# define HPPWALKFOOTPLANNER_DEBUG_HH
+#ifndef HPP_UTIL_DEBUG_HH
+# define HPP_UTIL_DEBUG_HH
 # include <cstdlib>
 # include <ostream>
 # include <fstream>
@@ -256,4 +256,4 @@ namespace hpp
 
 # endif // HPP_DEBUG
 
-#endif //! HPPWALKFOOTPLANNER_DEBUG_HH
+#endif //! HPP_UTIL_DEBUG_HH

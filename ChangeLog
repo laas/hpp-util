@@ -1,3 +1,13 @@
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Replace hpp-walkfootplanner occurrences by hpp-util.
+	* include/hpp/util/debug.hh,
+	* include/hpp/util/indent.hh,
+	* tests/atlocal.in,
+	* tests/common.hh,
+	* tests/package.m4.in,
+	* tests/simple-test.cc: Fix package name.
+
 2010-05-02  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add root exception class for HPP.
