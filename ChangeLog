@@ -1,5 +1,11 @@
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Check exception throwing macro.
+	* tests/exception.cc: Here.
+	* tests/exception.stdout: Regenerate.
+
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Test and fix exception implementation.
 	* include/hpp/util/exception.hh: Add print method.
 	* src/exception.cc: Implement print method, call print

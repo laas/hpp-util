@@ -1,1 +1,2 @@
 filename:0: put your error here
+../../tests/exception.cc:38: this error should be catched

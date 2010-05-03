@@ -17,6 +17,7 @@
 
 #include "config.h"
 
+#include <cassert>
 #include <iostream>
 #include <hpp/util/exception.hh>
 
@@ -31,6 +32,17 @@ int run_test ()
 			      "filename",
 			      0);
   std::cout << exception << std::endl;
+
+  try
+    {
+      HPP_THROW_EXCEPTION ("this error should be catched");
+      assert (0);
+    }
+  catch (::hpp::Exception& exception)
+    {
+      std::cout << exception << std::endl;
+    }
+
   return 0;
 }
 
