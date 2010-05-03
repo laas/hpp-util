@@ -9,6 +9,7 @@
 // See the COPYING file for more information.
 
 #include <iostream>
+#include <boost/format.hpp>
 
 #include "hpp/util/exception.hh"
 
@@ -53,9 +54,18 @@ namespace hpp
   }
 
   std::ostream&
+  Exception::print (std::ostream& o) const throw ()
+  {
+    using boost::format;
+    o << (format ("%1%:%2%: %3%") % file_ % line_ % message_);
+    return o;
+  }
+
+
+  std::ostream&
   operator<< (std::ostream& o, const Exception& exception)
   {
-    o << exception.what ();
+    exception.print (o);
     return o;
   }
 

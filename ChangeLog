@@ -1,5 +1,16 @@
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Test and fix exception implementation.
+	* include/hpp/util/exception.hh: Add print method.
+	* src/exception.cc: Implement print method, call print
+	method to display exception.
+	* tests/Makefile.am: Compile new test case.
+	* tests/exception.cc: New.
+	* tests/exception.stdout: New.
+	* tests/testsuite.at: Run new test case.
+
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Replace hpp-walkfootplanner occurrences by hpp-util.
 	* include/hpp/util/debug.hh,
 	* include/hpp/util/indent.hh,

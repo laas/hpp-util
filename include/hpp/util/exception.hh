@@ -32,6 +32,12 @@ namespace hpp
     Exception& operator= (const Exception& exception) throw ();
 
     virtual const char* what () const throw ();
+
+    /// \brief Display the exception on the specified output stream.
+    ///
+    /// \param o output stream used for display
+    /// \return output stream
+    virtual std::ostream& print (std::ostream& o) const throw ();
   private:
     std::string message_;
     std::string file_;
@@ -47,5 +53,9 @@ namespace hpp
   operator<< (std::ostream& o, const Exception& exception);
 
 } // end of namespace hpp.
+
+/// \brief Launch a HPP exception.
+# define HPP_THROW_EXCEPTION(MSG)			\
+  throw ::hpp::Exception (MSG, __FILE__, __LINE__)
 
 #endif //! HPP_UTIL_EXCEPTION_HH

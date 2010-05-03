@@ -22,6 +22,12 @@ simple_test_SOURCES = simple-test.cc $(COMMON_SOURCES)
 
 simple_test_LDADD = $(top_builddir)/src/libhpp-util.la
 
+# exception
+check_PROGRAMS = exception
+exception_SOURCES = exception.cc $(COMMON_SOURCES)
+exception_LDADD = $(top_builddir)/src/libhpp-util.la
+
+
 
 .PHONY: generate-reference
 
