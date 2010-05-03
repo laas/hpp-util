@@ -11,6 +11,10 @@
 #include <iostream>
 #include <boost/format.hpp>
 
+#ifdef HPP_LOG_EXCEPTION
+# include "hpp/util/debug.hh"
+#endif // HPP_LOG_EXCEPTION
+
 #include "hpp/util/exception.hh"
 
 namespace hpp
@@ -22,7 +26,12 @@ namespace hpp
       message_ (message),
       file_ (file),
       line_ (line)
-  {}
+  {
+    // Allow to transparently log created exceptions.
+#ifdef HPP_LOG_EXCEPTION
+    hppDout (info, *this);
+#endif // HPP_LOG_EXCEPTION
+  }
 
   Exception::~Exception () throw ()
   {}

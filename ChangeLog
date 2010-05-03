@@ -1,5 +1,10 @@
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Allow exception logging.
+	* src/exception.cc: Here.
+
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Check exception throwing macro.
 	* tests/exception.cc: Here.
 	* tests/exception.stdout: Regenerate.
