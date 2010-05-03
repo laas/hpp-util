@@ -28,4 +28,5 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.])
 
 CHECK_STDOUT([simple-test], [Check debugging prefix.])
-CHECK_STDOUT([exception], [Check exception.])
+CHECK_STDOUT([exception], [Check exception (class and macros).])
+CHECK_STDOUT([assertion], [Check assertion and contract programming tools.])

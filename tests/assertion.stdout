@@ -1,0 +1,3 @@
+../../tests/assertion.cc:75: i < 3 evaluates to false
+../../tests/assertion.cc:39: a >= 0 evaluates to false
+../../tests/assertion.cc:62: res == a + b evaluates to false

@@ -1,5 +1,17 @@
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add assertion and contract programming support.
+	* include/Makefile.am: Distribute new header.
+	* include/hpp/util/assertion.hh: New.
+	* include/hpp/util/exception.hh: Do not include symbol
+	visibility information when generating a class.
+	* tests/Makefile.am: Compile new test case.
+	* tests/assertion.cc: New.
+	* tests/assertion.stdout: New.
+	* tests/testsuite.at: Run new test case.
+
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add macro for generic exception throwing and custom exception definition.
 	* include/hpp/util/exception.hh: Add new macros.
 	* tests/exception.cc: Test generic exception throwing

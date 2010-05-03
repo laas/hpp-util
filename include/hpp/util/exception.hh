@@ -64,7 +64,7 @@ namespace hpp
 
 /// \brief Define a custom exception.
 # define HPP_MAKE_EXCEPTION(TYPE)			\
-  class HPP_UTIL_DLLAPI TYPE : public ::hpp::Exception	\
+  class TYPE : public ::hpp::Exception			\
   {							\
   public:						\
     TYPE (const std::string& message,			\

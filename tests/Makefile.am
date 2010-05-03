@@ -23,10 +23,14 @@ simple_test_SOURCES = simple-test.cc $(COMMON_SOURCES)
 simple_test_LDADD = $(top_builddir)/src/libhpp-util.la
 
 # exception
-check_PROGRAMS = exception
+check_PROGRAMS += exception
 exception_SOURCES = exception.cc $(COMMON_SOURCES)
 exception_LDADD = $(top_builddir)/src/libhpp-util.la
 
+# assertion
+check_PROGRAMS += assertion
+assertion_SOURCES = assertion.cc $(COMMON_SOURCES)
+assertion_LDADD = $(top_builddir)/src/libhpp-util.la
 
 
 .PHONY: generate-reference
@@ -51,7 +55,10 @@ generate-reference: $(check_PROGRAMS)
 
 # Distribute reference files.
 EXTRA_DIST +=					\
+	assertion.stdout			\
+	exception.stdout			\
 	simple-test.stdout
+
 
 # Clean log files.
 CLEANFILES += journal.*.log benchmark.*.*log

@@ -2,6 +2,7 @@ include $(top_srcdir)/build-aux/init.mk
 
 # -- Distribute and install headers
 nobase_include_HEADERS =					\
+		hpp/util/assertion.hh				\
 		hpp/util/config.hh				\
 		hpp/util/deprecated.hh				\
 		hpp/util/exception.hh				\
