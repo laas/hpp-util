@@ -1,5 +1,13 @@
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add macro for generic exception throwing and custom exception definition.
+	* include/hpp/util/exception.hh: Add new macros.
+	* tests/exception.cc: Test generic exception throwing
+	and define locally a custom exception.
+	* tests/exception.stdout: Regenerate.
+
+2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Allow exception logging.
 	* src/exception.cc: Here.
 

@@ -55,7 +55,23 @@ namespace hpp
 } // end of namespace hpp.
 
 /// \brief Launch a HPP exception.
-# define HPP_THROW_EXCEPTION(MSG)			\
+# define HPP_THROW_EXCEPTION_(MSG)			\
   throw ::hpp::Exception (MSG, __FILE__, __LINE__)
+
+/// \brief Launch a HPP exception (generic macro).
+# define HPP_THROW_EXCEPTION(TYPE, MSG)		\
+  throw TYPE (MSG, __FILE__, __LINE__)
+
+/// \brief Define a custom exception.
+# define HPP_MAKE_EXCEPTION(TYPE)			\
+  class HPP_UTIL_DLLAPI TYPE : public ::hpp::Exception	\
+  {							\
+  public:						\
+    TYPE (const std::string& message,			\
+	  const std::string& file,			\
+	  unsigned line) throw ()			\
+      : ::hpp::Exception (message, file, line)		\
+      {}						\
+  }
 
 #endif //! HPP_UTIL_EXCEPTION_HH

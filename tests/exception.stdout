@@ -1,2 +1,4 @@
-filename:0: put your error here
-../../tests/exception.cc:38: this error should be catched
+filename:0: put your message here
+../../tests/exception.cc:39: this exception should be catched
+../../tests/exception.cc:50: this exception should be catched
+../../tests/exception.cc:61: this custom exception should be catched
