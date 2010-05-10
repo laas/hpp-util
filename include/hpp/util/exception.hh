@@ -63,8 +63,8 @@ namespace hpp
   throw TYPE (MSG, __FILE__, __LINE__)
 
 /// \brief Define a custom exception.
-# define HPP_MAKE_EXCEPTION(TYPE)			\
-  class TYPE : public ::hpp::Exception			\
+# define HPP_MAKE_EXCEPTION(EXTRA_QUALIFIER, TYPE)	\
+  class EXTRA_QUALIFIER TYPE : public ::hpp::Exception  \
   {							\
   public:						\
     TYPE (const std::string& message,			\

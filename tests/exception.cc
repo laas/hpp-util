@@ -23,7 +23,7 @@
 
 #include "common.hh"
 
-HPP_MAKE_EXCEPTION (CustomException);
+HPP_MAKE_EXCEPTION (, CustomException);
 
 int run_test ();
 

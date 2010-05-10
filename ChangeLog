@@ -1,3 +1,13 @@
+2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Fix exception generation and visibility support.
+	* include/hpp/util/assertion.hh,
+	* include/hpp/util/exception.hh: Fix support for extra
+	qualifier in generated exceptions (i.e. for visibility support).
+	* src/Makefile.am: Fix typo.
+	* tests/exception.cc: Do not use extra qualifier here to
+	generate the exception.
+
 2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add assertion and contract programming support.

@@ -23,7 +23,7 @@
 
 namespace hpp
 {
-  HPP_MAKE_EXCEPTION (HPP_UTIL_DLLAPI AssertionError);
+  HPP_MAKE_EXCEPTION (HPP_UTIL_DLLAPI, AssertionError);
 } // end of namespace hpp.
 
 /// \brief Define HPP_ASSERT.
