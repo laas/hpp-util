@@ -59,7 +59,7 @@ AC_PROG_SED
 JRL_PROG_DOXYGEN
 
 # Search for Libtool.
-LT_INIT
+LT_INIT([win32-dll])
 
 # Search for Boost.
 BOOST_REQUIRE([1.34])

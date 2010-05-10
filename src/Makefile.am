@@ -9,6 +9,9 @@ AM_CXXFLAGS += $(WARNING_CXXFLAGS)
 # Add Boost.Filesystem linker flags.
 AM_LDFLAGS += $(BOOST_FILESYSTEM_LDFLAGS)
 
+# Make sure all symbols are defined.
+AM_LDFLAGS += -no-undefined
+
 # Add dependencies CPPFLAGS.
 AM_CPPFLAGS += 					\
 	-DBUILDING_HPP_UTIL			\

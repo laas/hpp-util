@@ -1,5 +1,12 @@
 2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add support for Microsoft Windows.
+	* configure.ac: Add support for Microsoft Windows.
+	* src/Makefile.am: Make compilation fail if undefined
+	symbols exist in shared library.
+
+2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix exception generation and visibility support.
 	* include/hpp/util/assertion.hh,
 	* include/hpp/util/exception.hh: Fix support for extra
