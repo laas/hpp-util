@@ -1,3 +1,8 @@
+2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add visibility macro to Timer class.
+	* include/hpp/util/timer.hh: Here.
+
 2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add support for Microsoft Windows.

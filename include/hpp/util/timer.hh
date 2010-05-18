@@ -25,7 +25,7 @@ namespace hpp
 {
   namespace debug
   {
-    class Timer
+    class HPP_UTIL_DLLAPI Timer
     {
     public:
       typedef boost::posix_time::ptime ptime;
