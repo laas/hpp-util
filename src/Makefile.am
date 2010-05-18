@@ -24,7 +24,8 @@ libhpp_util_la_SOURCES = 			\
 	debug.cc				\
 	exception.cc				\
 	indent.cc				\
-	timer.cc
+	timer.cc				\
+	version.cc
 
 libhpp_util_la_LIBADD = 			\
 	$(BOOST_FILESYSTEM_LIBS)		\

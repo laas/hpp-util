@@ -65,6 +65,7 @@ LT_INIT([win32-dll])
 BOOST_REQUIRE([1.34])
 BOOST_FILESYSTEM
 
+BOOST_STRING
 BOOST_SYSTEM #FIXME: required?
 
 
@@ -73,6 +74,7 @@ AC_SUBST([PACKAGE_CPPNAME],
  [`echo "$PACKAGE_TARNAME" \
   | tr '@<:@:lower:@:>@' '@<:@:upper:@:>@' | sed 's/-/_/g'`])
 AC_CONFIG_FILES([include/hpp/util/config.hh])
+AC_CONFIG_FILES([include/hpp/util/version.hh])
 
 ## ------------ ##
 ## Test-suite.  ##

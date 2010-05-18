@@ -1,5 +1,25 @@
 2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add version checking mechanism.
+
+	One common problem when dealing with shared library is
+	keeping headers and libraries synchronized. Hard to debug
+	problems can be triggered by the inclusion of old headers.
+
+	The approach implemented in this patch keeps two strings
+	containing the package version: one is the header and
+	one compiled in the library. A macro is also provided
+	to allow the comparison of both values. This can be used
+	in libraries depending on hpp-util to make sure the library
+	is recent enough.
+
+	* configure.ac: Add dependency toward Boost.String.
+	* include/hpp/util/version.hh.in: New.
+	* src/Makefile.am: Compile new source file.
+	* src/version.cc: New.
+
+2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix package name.
 	* include/hpp/util/timer.hh,
 	* src/debug.cc,
