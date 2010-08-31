@@ -1,5 +1,4 @@
-#! /bin/sh
-# Copyright (C) 2010 Thomas Moulard, JRL, CNRS/AIST.
+# Copyright (C) 2010 Florent Lamiraux, Thomas Moulard, JRL, CNRS/AIST.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,23 +13,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Make sure all errors are fatal.
-set -e
+# Requires at least CMake 2.6 to configure the package.
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
-# Override the locale.
-LC_ALL='C'
-export LC_ALL
+INCLUDE(cmake/base.cmake)
 
-: ${GIT=git}
+SET(PROJECT_NAME hpp-util)
+SET(PROJECT_VERSION 0.2)
 
-# For dev's:
-test "x$1" = x--debug && shift && set -x
+SETUP_PROJECT()
 
-# Make sure that the sub-module is retrieved.
-if `test -d ".git" || $GIT rev-parse --git-dir 2> /dev/null > /dev/null`; then
-    $GIT submodule init
-    $GIT submodule update
-fi
+ADD_SUBDIRECTORY(include)
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(doc)
+ADD_SUBDIRECTORY(tests)
 
-# Additional actions can be done in the submodule,
-exec cmake/bootstrap
+SETUP_PROJECT_FINALIZE()
