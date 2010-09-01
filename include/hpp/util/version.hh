@@ -12,9 +12,6 @@
 # define HPP_UTIL_VERSION_HH
 # include <hpp/util/config.hh>
 
-// Package version (header).
-# define HPP_UTIL_VERSION "@PACKAGE_VERSION@"
-
 // Compare header version to library version.
 # define HPP_UTIL_CHECK()			\
   ::hpp::util::checkVersion (HPP_UTIL_VERSION)
