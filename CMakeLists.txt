@@ -23,6 +23,9 @@ SET(PROJECT_VERSION 0.2)
 
 SETUP_PROJECT()
 
+# Search for Boost.
+FIND_PACKAGE(Boost 1.34 COMPONENTS filesystem system)
+
 SET(${PROJECT_NAME}_HEADERS
   include/hpp/util/assertion.hh
   include/hpp/util/debug.hh
