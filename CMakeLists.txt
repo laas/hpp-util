@@ -23,9 +23,18 @@ SET(PROJECT_VERSION 0.2)
 
 SETUP_PROJECT()
 
-ADD_SUBDIRECTORY(include)
+SET(${PROJECT_NAME}_HEADERS
+  include/hpp/util/assertion.hh
+  include/hpp/util/debug.hh
+  include/hpp/util/deprecated.hh
+  include/hpp/util/exception.hh
+  include/hpp/util/indent.hh
+  include/hpp/util/portability.hh
+  include/hpp/util/timer.hh
+  include/hpp/util/version.hh
+)
+
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(doc)
 ADD_SUBDIRECTORY(tests)
 
 SETUP_PROJECT_FINALIZE()
