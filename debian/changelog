@@ -1,3 +1,9 @@
+hpp-util (0.2-2) hardy; urgency=low
+
+  * Fix dependencies (add Boost and fix debhelper version).
+
+ -- Thomas Moulard <thomas.moulard@gmail.com>  Wed, 08 Sep 2010 15:43:00 +0200
+
 hpp-util (0.2-1) hardy; urgency=low
 
   * Initial release.
