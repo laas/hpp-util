@@ -1,3 +1,5 @@
 _build*
 +committed/
 ,*
+obj-i486-linux-gnu/
+debian/*.log
