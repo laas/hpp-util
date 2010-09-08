@@ -38,6 +38,9 @@ ADD_LIBRARY(hpp-util
   version.cc
 )
 
+# Set shared library version.
+SET_TARGET_PROPERTIES(hpp-util PROPERTIES SOVERSION ${PROJECT_VERSION})
+
 # Link against Boost libraries.
 TARGET_LINK_LIBRARIES(hpp-util ${Boost_LIBRARIES})
 
