@@ -1,0 +1,27 @@
+Source: hpp-util
+Priority: extra
+Maintainer: Thomas Moulard <thomas.moulard@gmail.com>
+Build-Depends: debhelper (>= 7), cmake
+Standards-Version: 3.8.4
+Vcs-Git: git://git@github.com:laas/hpp-util.git
+Vcs-browser: http://github.com/laas/hpp-util
+Section: libs
+Homepage: http://github.com/laas/hpp-util
+
+Package: libhpp-util-dev
+Section: libdevel
+Architecture: any
+Depends: libhpp-util0.2 (= ${binary:Version}), ${misc:Depends}
+Description: Development files for the hpp-util library
+ The hpp-util library contains tehchnicals tools (logging and
+ benchmark) for the humanoid path planner project.
+ .
+ This package contains development files (headers and
+ shared library symbolic link).
+
+Package: libhpp-util0.2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Debugging tools for the Humanoid Path Planner project
+ The hpp-util library contains tehchnicals tools (logging and
+ benchmark) for the humanoid path planner project.
