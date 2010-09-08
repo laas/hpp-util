@@ -2,6 +2,7 @@ Source: hpp-util
 Priority: extra
 Maintainer: Thomas Moulard <thomas.moulard@gmail.com>
 Build-Depends: debhelper (>= 7), cmake (>= 2.6),
+	       doxygen (>= 1.6.3),
 	       libboost-dev (>= 1.35),
 	       libboost-filesystem-dev (>= 1.35),
 	       libboost-system-dev (>= 1.35)

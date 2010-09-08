@@ -1,3 +1,9 @@
+hpp-util (0.2-4) lucid; urgency=low
+
+  * Add doxygen as a build dependency.
+
+ -- Thomas Moulard <thomas.moulard@gmail.com>  Wed, 08 Sep 2010 16:37:00 +0200
+
 hpp-util (0.2-3) lucid; urgency=low
 
   * Fix dependencies and switch to lucid.
