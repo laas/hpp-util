@@ -22,11 +22,6 @@ SET(PROJECT_NAME hpp-util)
 SET(PROJECT_VERSION 0.2)
 SET(PROJECT_DESCRIPTION "Debugging tools for the HPP project.")
 SET(PROJECT_URL "http://github.com/laas/hpp-util")
-SET(PROJECT_EMAIL "hpp@laas.fr")
-SET(PROJECT_MAINTAINER "Thomas Moulard <thomas.moulard@gmail.com>")
-
-# Debian additional information.
-SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libboost-dev (>= 1.35)")
 
 SETUP_PROJECT()
 
