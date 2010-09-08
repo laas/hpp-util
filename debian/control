@@ -15,7 +15,7 @@ Homepage: http://github.com/laas/hpp-util
 Package: libhpp-util-dev
 Section: libdevel
 Architecture: any
-Depends: libhpp-util0.2 (= ${binary:Version}), ${misc:Depends}
+Depends: libhpp-util0.3 (= ${binary:Version}), ${misc:Depends}
 Description: Development files for the hpp-util library
  The hpp-util library contains tehchnicals tools (logging and
  benchmark) for the humanoid path planner project.
@@ -23,7 +23,7 @@ Description: Development files for the hpp-util library
  This package contains development files (headers and
  shared library symbolic link).
 
-Package: libhpp-util0.2
+Package: libhpp-util0.3
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Debugging tools for the Humanoid Path Planner project

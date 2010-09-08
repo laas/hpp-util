@@ -1,3 +1,10 @@
+hpp-util (0.3-1) lucid; urgency=low
+
+  * Update to upstream release 0.3.
+
+ -- Thomas Moulard <thomas.moulard@gmail.com>  Wed, 08 Sep 2010 16:52:00 +0200
+
+
 hpp-util (0.2-4) lucid; urgency=low
 
   * Add doxygen as a build dependency.
