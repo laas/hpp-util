@@ -1,7 +1,7 @@
 Source: hpp-util
 Priority: extra
 Maintainer: Thomas Moulard <thomas.moulard@gmail.com>
-Build-Depends: debhelper (>= 7), cmake
+Build-Depends: debhelper (>= 6), cmake
 Build-Depends: libboost-dev (>= 1.34)
 Build-Depends: libboost-filesystem-dev (>= 1.34)
 Build-Depends: libboost-system-dev (>= 1.34)
