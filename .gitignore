@@ -1,4 +1,5 @@
 _build*
+build*
 +committed/
 ,*
 obj-i486-linux-gnu/

@@ -13,6 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+INCLUDE(../cmake/test.cmake)
+
 # Define tests.
 DEFINE_UNIT_TEST(simple-test hpp-util)
 DEFINE_UNIT_TEST(assertion hpp-util)

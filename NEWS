@@ -1,5 +1,8 @@
                                                                 -*- outline -*-
 
+New in 0.4, 2010-10-14:
+* Fix distributed pkg-config file.
+
 New in 0.3, 2010-09-08:
 * Add benchmark tools.
 * Add support for contract programming.
