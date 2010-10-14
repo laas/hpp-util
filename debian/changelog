@@ -1,3 +1,9 @@
+hpp-util (0.4-1ubuntu1) lucid; urgency=low
+
+  * Update to new release version 0.4c.
+
+ -- Thomas Moulard <thomas.moulard@gmail.com>  Thu, 14 Oct 2010 15:16:20 +0200
+
 hpp-util (0.3-1) lucid; urgency=low
 
   * Update to upstream release 0.3.
