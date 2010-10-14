@@ -25,7 +25,7 @@ SET(PROJECT_URL "http://github.com/laas/hpp-util")
 
 SETUP_PROJECT()
 
-SET(PKG_CONFIG_LIBS ${PKG_CONFIG_LIBS} "-lhpp-util")
+SET(PKG_CONFIG_LIBS "${PKG_CONFIG_LIBS} -lhpp-util")
 
 # Search for Boost.
 FIND_PACKAGE(Boost 1.34 COMPONENTS filesystem system)
