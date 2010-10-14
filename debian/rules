@@ -11,5 +11,11 @@
 
 export HPP_LOGGINGDIR=/tmp
 
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_CXX_FLAGS=-DHPP_DEBUG
+
+override_dh_strip:
+	dh_strip -a --dbg-package=libhpp-util0.4c-dbg
+
 %:
 	dh  $@
