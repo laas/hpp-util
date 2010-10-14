@@ -23,10 +23,10 @@
 
 namespace hpp
 {
-  inline long int& indent (std::ostream& o)
+  inline int& indent (std::ostream& o)
   {
     // The slot to store the current indentation level.
-    static const long int indent_index = std::ios::xalloc ();
+    static const int indent_index = std::ios::xalloc ();
     return o.iword (indent_index);
   }
 
