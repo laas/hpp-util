@@ -19,7 +19,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 INCLUDE(cmake/base.cmake)
 
 SET(PROJECT_NAME hpp-util)
-SET(PROJECT_VERSION 0.3)
+SET(PROJECT_VERSION 0.4c)
 SET(PROJECT_DESCRIPTION "Debugging tools for the HPP project.")
 SET(PROJECT_URL "http://github.com/laas/hpp-util")
 
