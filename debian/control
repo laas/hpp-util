@@ -1,7 +1,7 @@
 Source: hpp-util
 Priority: extra
 Maintainer: Thomas Moulard <thomas.moulard@gmail.com>
-Build-Depends: debhelper (>= 7), cmake (>= 2.6),
+Build-Depends: debhelper (>= 7.0.50), cmake (>= 2.6),
 	       doxygen (>= 1.6.3),
 	       libboost-dev (>= 1.35),
 	       libboost-filesystem-dev (>= 1.35),
@@ -18,10 +18,15 @@ Architecture: any
 Depends: libhpp-util0.4c (= ${binary:Version}),
 	       libboost-dev (>= 1.35),
 	       libboost-filesystem-dev (>= 1.35),
-	       libboost-system-dev (>= 1.35)
+	       libboost-system-dev (>= 1.35),
+	       ${misc:Depends}
 Description: Development files for the hpp-util library
- The hpp-util library contains tehchnicals tools (logging and
- benchmark) for the humanoid path planner project.
+ The hpp-util library contains technicals tools for the humanoid path
+ planner project.
+ .
+ It provides an unified error reporting and logging mechanism
+ for developers and can also be used to realize benchmarks of
+ specific parts of a program.
  .
  This package contains development files (headers and
  shared library symbolic link).
@@ -30,15 +35,23 @@ Package: libhpp-util0.4c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Debugging tools for the Humanoid Path Planner project
- The hpp-util library contains tehchnicals tools (logging and
- benchmark) for the humanoid path planner project.
+ The hpp-util library contains technicals tools for the humanoid path
+ planner project.
+ .
+ It provides an unified error reporting and logging mechanism
+ for developers and can also be used to realize benchmarks of
+ specific parts of a program.
 
 Package: libhpp-util0.4c-dbg
 Architecture: any
 Section: debug
 Depends: libhpp-util0.4c (= ${binary:Version}), ${misc:Depends}
 Description: Development files for the hpp-util library
- The hpp-util library contains tehchnicals tools (logging and
- benchmark) for the humanoid path planner project.
+ The hpp-util library contains technicals tools for the humanoid path
+ planner project.
+ .
+ It provides an unified error reporting and logging mechanism
+ for developers and can also be used to realize benchmarks of
+ specific parts of a program.
  .
  This package contains the symbols for the shared libraries.
