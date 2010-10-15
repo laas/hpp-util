@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" href="$classhpp_1_1debug_1_1ConsoleOutput.html" title="Logging in console (std::cerr)." alt="" coords="5,84,213,111"/>
+<area shape="rect" href="$classhpp_1_1debug_1_1JournalOutput.html" title="Logging in journal file in the logging directory." alt="" coords="237,84,437,111"/>
+</map>
