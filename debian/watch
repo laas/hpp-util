@@ -4,4 +4,5 @@
 # See uscan(1) for format
 
 version=3
-http://github.com/laas/hpp-util/downloads /laas/hpp-util/tarball/v(.*)
+
+http://githubredir.debian.net/github/laas/hpp-util (.*).tar.gz
