@@ -13,6 +13,7 @@
 # include <cstdlib>
 # include <ostream>
 # include <fstream>
+# include <sstream>
 # include <vector>
 
 # include <hpp/util/config.hh>
