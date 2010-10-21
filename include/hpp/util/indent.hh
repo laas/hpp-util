@@ -17,7 +17,7 @@
 namespace hpp
 {
   /// \brief The current indentation level for \a o.
-  HPP_UTIL_DLLAPI long int& indent (std::ostream& o);
+  HPP_UTIL_DLLAPI long& indent (std::ostream& o);
 
   /// \brief Increment the indentation.
   HPP_UTIL_DLLAPI std::ostream& incindent (std::ostream& o);
