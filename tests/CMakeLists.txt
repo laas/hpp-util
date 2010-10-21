@@ -13,9 +13,24 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-INCLUDE(../cmake/test.cmake)
+# DEFINE_TEST(NAME)
+# -----------------
+#
+# Compile a program and add it as a test.
+#
+MACRO(DEFINE_TEST NAME LIB)
+  ADD_EXECUTABLE(${NAME} ${NAME}.cc)
+
+  TARGET_LINK_LIBRARIES(${NAME} hpp-util)
+
+  # Link against Boost.
+  TARGET_LINK_LIBRARIES(${NAME} ${Boost_LIBRARIES})
+
+  ADD_TEST(${NAME} ${RUNTIME_OUTPUT_DIRECTORY}/${NAME})
+ENDMACRO(DEFINE_TEST)
+
 
 # Define tests.
-DEFINE_UNIT_TEST(simple-test hpp-util)
-DEFINE_UNIT_TEST(assertion hpp-util)
-DEFINE_UNIT_TEST(exception hpp-util)
+DEFINE_TEST(simple-test hpp-util)
+DEFINE_TEST(assertion hpp-util)
+DEFINE_TEST(exception hpp-util)

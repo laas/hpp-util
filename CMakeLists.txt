@@ -28,6 +28,8 @@ SETUP_PROJECT()
 SET(PKG_CONFIG_LIBS "${PKG_CONFIG_LIBS} -lhpp-util")
 
 # Search for Boost.
+SET(Boost_USE_STATIC_LIBS OFF)
+SET(Boost_USE_MULTITHREAD ON)
 FIND_PACKAGE(Boost 1.34 COMPONENTS filesystem system)
 
 SET(${PROJECT_NAME}_HEADERS
@@ -40,6 +42,9 @@ SET(${PROJECT_NAME}_HEADERS
   include/hpp/util/timer.hh
   include/hpp/util/version.hh
 )
+
+# Add Boost path to include directories.
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(tests)
