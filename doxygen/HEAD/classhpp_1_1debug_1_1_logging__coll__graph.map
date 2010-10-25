@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" href="$classhpp_1_1debug_1_1_console_output.html" title="Logging in console (std::cerr)." alt="" coords="136,399,315,428"/>
+<area shape="rect" href="$classhpp_1_1debug_1_1_output.html" title="Debugging output." alt="" coords="160,245,291,275"/>
+<area shape="rect" href="$classhpp_1_1debug_1_1_journal_output.html" title="Logging in journal file in the logging directory." alt="" coords="309,456,483,485"/>
+<area shape="rect" title="STL class." alt="" coords="372,341,452,371"/>
+<area shape="rect" title="STL class." alt="" coords="321,245,487,275"/>
+<area shape="rect" title="STL class." alt="" coords="511,341,609,371"/>
+<area shape="rect" title="STL class." alt="" coords="511,245,695,275"/>
+<area shape="rect" title="STL class." alt="" coords="511,165,695,195"/>
+<area shape="rect" title="STL class." alt="" coords="527,85,679,115"/>
+<area shape="rect" title="STL class." alt="" coords="553,5,652,35"/>
+<area shape="rect" href="$classhpp_1_1debug_1_1_channel.html" title="Receive debugging information." alt="" coords="7,456,145,485"/>
+</map>
