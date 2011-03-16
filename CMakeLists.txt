@@ -20,7 +20,6 @@ INCLUDE(cmake/base.cmake)
 INCLUDE(cmake/boost.cmake)
 
 SET(PROJECT_NAME hpp-util)
-SET(PROJECT_VERSION 0.4d)
 SET(PROJECT_DESCRIPTION "Debugging tools for the HPP project.")
 SET(PROJECT_URL "http://github.com/laas/hpp-util")
 
