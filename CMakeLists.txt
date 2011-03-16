@@ -17,20 +17,23 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 INCLUDE(cmake/base.cmake)
+INCLUDE(cmake/boost.cmake)
 
 SET(PROJECT_NAME hpp-util)
 SET(PROJECT_VERSION 0.4d)
 SET(PROJECT_DESCRIPTION "Debugging tools for the HPP project.")
 SET(PROJECT_URL "http://github.com/laas/hpp-util")
 
+SET(CXX_DISABLE_WERROR 1)
+
 SETUP_PROJECT()
 
-SET(PKG_CONFIG_LIBS "${PKG_CONFIG_LIBS} -lhpp-util")
+PKG_CONFIG_APPEND_LIBS("hpp-util")
 
 # Search for Boost.
-SET(Boost_USE_STATIC_LIBS OFF)
-SET(Boost_USE_MULTITHREAD ON)
-FIND_PACKAGE(Boost 1.34 COMPONENTS filesystem system)
+SET(BOOST_COMPONENTS filesystem system)
+SEARCH_FOR_BOOST()
+
 
 SET(${PROJECT_NAME}_HEADERS
   include/hpp/util/assertion.hh
