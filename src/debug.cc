@@ -181,7 +181,11 @@ namespace hpp
     JournalOutput::JournalOutput (std::string filename)
       : filename (filename),
 	lastFunction (),
-	stream (makeLogFile (*this).c_str ())
+#ifdef HPP_DEBUG
+      stream (makeLogFile (*this).c_str ())
+#else
+      stream ()
+#endif
     {}
 
     JournalOutput::~JournalOutput ()
