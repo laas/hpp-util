@@ -38,13 +38,14 @@ namespace hpp
       boost::split (headerVersion, header_version, boost::is_any_of("."));
       boost::split (libraryVersion, version, boost::is_any_of("."));
 
-      unsigned s = std::max (headerVersion.size (), libraryVersion.size ());
+      long unsigned s = std::max (headerVersion.size (),
+				  libraryVersion.size ());
       headerVersion.resize (s);
       libraryVersion.resize (s);
 
       assert (headerVersion.size () == libraryVersion.size ());
 
-      for (unsigned i = 0; i < s; ++i)
+      for (long unsigned i = 0; i < s; ++i)
 	{
 	  if (headerVersion != libraryVersion)
 	    return (headerVersion > libraryVersion) ? -1 : 1;
