@@ -85,7 +85,7 @@ namespace hpp
     {
     public:
       explicit Output ();
-      ~Output ();
+      virtual ~Output ();
 
       virtual void
 	write (const Channel& channel,
@@ -120,7 +120,7 @@ namespace hpp
 
       explicit Channel (char const* label,
 			const subscribers_t& subscribers);
-      ~Channel ();
+      virtual ~Channel ();
 
       void write (char const* file,
 		  int line,
