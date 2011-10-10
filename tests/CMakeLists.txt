@@ -13,6 +13,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# Path to boost headers
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+
 # DEFINE_TEST(NAME)
 # -----------------
 #

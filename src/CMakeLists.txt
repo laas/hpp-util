@@ -28,6 +28,9 @@ ADD_DEFINITIONS(-DBUILDING_HPP_UTIL)
 # Define logging directory location.
 ADD_DEFINITIONS(-DHPP_LOGGINGDIR="${CMAKE_INSTALL_PREFIX}/var/log")
 
+# Path to boost headers
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+
 # Compile hpp-util library.
 ADD_LIBRARY(hpp-util
   SHARED
