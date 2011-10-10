@@ -54,7 +54,7 @@ namespace hpp
     o << std::endl;
     // Be sure to be able to restore the stream flags.
     char fill = o.fill (' ');
-    return o << std::setw (indent (o))
+    return o << std::setw ((int)indent (o))
 	     << ""
 	     << std::setfill (fill);
   }
