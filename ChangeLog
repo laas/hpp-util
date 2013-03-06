@@ -1,144 +1,74 @@
-2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
+CHANGELOG
+----------------------
 
-	Add version checking mechanism.
+[Current]
 
-	One common problem when dealing with shared library is
-	keeping headers and libraries synchronized. Hard to debug
-	problems can be triggered by the inclusion of old headers.
+[v0.6]
+ * Synchronize
+ * Synchronize.
+ * Fix compilation on x86_64.
+ * Fix compilation on x86_64.
+ * Make sure Boost headers are found.
+ * Make Output and Channel destructors virtual.
 
-	The approach implemented in this patch keeps two strings
-	containing the package version: one is the header and
-	one compiled in the library. A macro is also provided
-	to allow the comparison of both values. This can be used
-	in libraries depending on hpp-util to make sure the library
-	is recent enough.
+[v0.5]
+ * Do not create unneeded journal file.
+ * Synchronize.
+ * Remove version number.
+ * Update cmake submodule.
 
-	* configure.ac: Add dependency toward Boost.String.
-	* include/hpp/util/version.hh.in: New.
-	* src/Makefile.am: Compile new source file.
-	* src/version.cc: New.
+[v0.4d]
+ * Update version number.
+ * Add Doxygen main page.
+ * Modernize documentation.
+ * Fix return type in indent.cc.
+ * Fix Boost dectection.
+ * Add missing include.
+ * Fix indent return type which triggered an error on amd64.
 
-2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
+[v0.4c]
+ * Update version number.
 
-	Fix package name.
-	* include/hpp/util/timer.hh,
-	* src/debug.cc,
-	* src/timer.cc: Replace hpp/walkfootplanner by hpp-util.
+[v0.4b]
+ * Fix pkg-config file.
 
-2010-05-18  Thomas Moulard  <thomas.moulard@gmail.com>
+[v0.4]
+ * Release v0.4.
+ * Fix pkg-config file.
+ * Synchronize.
+ * Fix submodule URL.
+ * Update files ignored by git.
+ * Synchronize.
 
-	Add visibility macro to Timer class.
-	* include/hpp/util/timer.hh: Here.
+[v0.3]
+ * Release v0.3.
+ * Synchronize.
+ * Drop CPack support.
+ * Remove CPack support.
+ * Fix Debian package support.
+ * Add support for tests.
+ * Add Doxygen support, simplify CMakeLists.txt files.
+ * Fix support for header installation and generation.
+ * Fix typo in README.
+ * Switch README file to Markdown syntax.
+ * Switch from Autotools to CMake.
+ * Add version checking mechanism.
+ * Fix package name.
+ * Add visibility macro to Timer class.
+ * Add support for Microsoft Windows.
+ * Fix exception generation and visibility support.
+ * Add assertion and contract programming support.
+ * Add macro for generic exception throwing and custom exception definition.
+ * Allow exception logging.
+ * Check exception throwing macro.
+ * Test and fix exception implementation.
+ * Replace hpp-walkfootplanner occurrences by hpp-util.
+ * Add root exception class for HPP.
 
-2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Add support for Microsoft Windows.
-	* configure.ac: Add support for Microsoft Windows.
-	* src/Makefile.am: Make compilation fail if undefined
-	symbols exist in shared library.
-
-2010-05-10  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Fix exception generation and visibility support.
-	* include/hpp/util/assertion.hh,
-	* include/hpp/util/exception.hh: Fix support for extra
-	qualifier in generated exceptions (i.e. for visibility support).
-	* src/Makefile.am: Fix typo.
-	* tests/exception.cc: Do not use extra qualifier here to
-	generate the exception.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Add assertion and contract programming support.
-	* include/Makefile.am: Distribute new header.
-	* include/hpp/util/assertion.hh: New.
-	* include/hpp/util/exception.hh: Do not include symbol
-	visibility information when generating a class.
-	* tests/Makefile.am: Compile new test case.
-	* tests/assertion.cc: New.
-	* tests/assertion.stdout: New.
-	* tests/testsuite.at: Run new test case.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Add macro for generic exception throwing and custom exception definition.
-	* include/hpp/util/exception.hh: Add new macros.
-	* tests/exception.cc: Test generic exception throwing
-	and define locally a custom exception.
-	* tests/exception.stdout: Regenerate.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Allow exception logging.
-	* src/exception.cc: Here.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Check exception throwing macro.
-	* tests/exception.cc: Here.
-	* tests/exception.stdout: Regenerate.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Test and fix exception implementation.
-	* include/hpp/util/exception.hh: Add print method.
-	* src/exception.cc: Implement print method, call print
-	method to display exception.
-	* tests/Makefile.am: Compile new test case.
-	* tests/exception.cc: New.
-	* tests/exception.stdout: New.
-	* tests/testsuite.at: Run new test case.
-
-2010-05-03  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Replace hpp-walkfootplanner occurrences by hpp-util.
-	* include/hpp/util/debug.hh,
-	* include/hpp/util/indent.hh,
-	* tests/atlocal.in,
-	* tests/common.hh,
-	* tests/package.m4.in,
-	* tests/simple-test.cc: Fix package name.
-
-2010-05-02  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Add root exception class for HPP.
-
-	Add an Exception class in HPP. All used exceptions
-	should inherit this one to allow easy catching
-	of all HPP exceptions.
-
-	* include/Makefile.am: Distribute new file.
-	* include/hpp/util/exception.hh: New.
-	* src/Makefile.am: Compile new source.
-	* src/exception.cc: New.
-
-2010-04-21  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Fill NEWS file.
-	* NEWS: Announce first release.
-
-2010-04-21  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Add support for tagging functions/variables/types as deprecated.
-	* include/Makefile.am: Distribute new header.
-	* include/hpp/util/deprecated.hh: New.
-
-2010-03-16  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Fix static initialization fiasco.
-	* include/Makefile.am: Add forgotten file.
-	* include/hpp/util/debug.hh,
-	* src/debug.cc: Gathers all instances in the Logging
-	class to enforce initialization/destruction order.
-
-2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Update copyright.
-	* src/debug.cc,
-	* src/indent.cc: Here.
-
-2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
-
-	Synchronize.
-	* build-aux: Synchronize.
-
+[v0.1]
+ * Fill NEWS file.
+ * Add support for tagging functions/variables/types as deprecated.
+ * Fix static initialization fiasco.
+ * Update copyright.
+ * Synchronize.
+ * Initial import.
