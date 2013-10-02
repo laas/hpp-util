@@ -114,7 +114,7 @@ namespace hpp
 			 const Channel& channel,
 			 char const* file,
 			 int line,
-			 char const* function)
+			 char const*)
     {
       stream
 	<< channel.label () << ':'
