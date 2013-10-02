@@ -37,7 +37,6 @@ SEARCH_FOR_BOOST()
 SET(${PROJECT_NAME}_HEADERS
   include/hpp/util/assertion.hh
   include/hpp/util/debug.hh
-  include/hpp/util/deprecated.hh
   include/hpp/util/doc.hh
   include/hpp/util/exception.hh
   include/hpp/util/indent.hh
