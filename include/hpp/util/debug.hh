@@ -245,9 +245,15 @@ namespace hpp
 
 # else
 
-#  define hppDebug(statement)
-#  define hppDebugStatement(statement)
-#  define hppDout(channel, data)
+#  define hppDebug(statement)			\
+  do {                                          \
+  } while (0)
+#  define hppDebugStatement(statement)          \
+  do {                                          \
+  } while (0)
+#  define hppDout(channel, data)                \
+  do {                                          \
+  } while (0)
 #  define hppDoutFatal(channel, data)		\
   do {						\
     using namespace hpp;			\
