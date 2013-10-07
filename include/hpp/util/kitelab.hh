@@ -22,14 +22,16 @@
   typedef KIT_SHARED_PTR(t) t##ShPtr;		 \
   typedef KIT_WEAK_PTR(t) t##WkPtr;		 \
   typedef KIT_SHARED_PTR_CONST(t) t##ConstShPtr; \
-  typedef KIT_WEAK_PTR_CONST(t) t##ConstWkPtr
+  typedef KIT_WEAK_PTR_CONST(t) t##ConstWkPtr;	 \
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
 /** Makes a forward declaration of class <tt>\a t</tt> and of the four
 *   types of shared pointers associated with it.
 */
 # define HPP_KIT_PREDEF_CLASS(t)		\
   class t;					\
-  HPP_KIT_POINTER_DEFS(t)
+  HPP_KIT_POINTER_DEFS(t);			\
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
 /** Macro used to add a CkcdDetector to the default detector list
  *		\param detectorClass Name of a subclass of CkcdDetector.
@@ -42,7 +44,8 @@
 #define HPP_KCD_REGISTER_DETECTOR(detectorClass)	\
   size_t detectorClass##DummyFunctionReturn =		\
     CkcdGlobal::instance().registerDetector		\
-    (&CkcdGlobal::createDetector<detectorClass>)
+    (&CkcdGlobal::createDetector<detectorClass>);	\
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
 /** Macro used to add a CkcdTestTreeLocked to the default tree list
 *		\param treeClass Name of a subclass of CkcdTestTreeLocked.
@@ -56,10 +59,12 @@
 #define HPP_KCD_REGISTER_TEST_TREE_LOCKED(treeClass)	\
   size_t treeClass##DummyFunctionReturn =		\
     CkcdGlobal::instance().registerTestTreeLocked	\
-    (&CkcdGlobal::createTestTreeLocked<treeClass>)
+    (&CkcdGlobal::createTestTreeLocked<treeClass>);	\
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
 #define HPP_KPP_DECLARE_PROPERTY( P )		       \
   static const CkppProperty::TPropertyID P##_PROPERTY; \
-  static const std::string P##_PROPERTY_STRING_ID
+  static const std::string P##_PROPERTY_STRING_ID;     \
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
 #endif //! HPP_UTIL_KITELAB_HH
