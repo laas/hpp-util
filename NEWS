@@ -1,5 +1,10 @@
                                                                 -*- outline -*-
 
+New in 0.7, 2013-10-07:
+* Define Kitelab replacement macros to prevent warning triggering. 
+* Improve debug signals behavior to prevent warning triggering.
+* Clean up package.
+
 New in 0.4, 2010-10-14:
 * Fix distributed pkg-config file.
 
