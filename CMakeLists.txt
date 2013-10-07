@@ -40,6 +40,7 @@ SET(${PROJECT_NAME}_HEADERS
   include/hpp/util/doc.hh
   include/hpp/util/exception.hh
   include/hpp/util/indent.hh
+  include/hpp/util/kitelab.hh
   include/hpp/util/portability.hh
   include/hpp/util/timer.hh
   include/hpp/util/version.hh
