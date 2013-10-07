@@ -12,6 +12,7 @@
 # define HPP_UTIL_HH
 # include <hpp/util/debug.hh>
 # include <hpp/util/indent.hh>
+# include <hpp/util/kitelab.hh>
 # include <hpp/util/portability.hh>
 # include <hpp/util/timer.hh>
 #endif //! HPP_UTIL_HH
