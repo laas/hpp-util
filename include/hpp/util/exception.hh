@@ -74,4 +74,16 @@ namespace hpp
       {}						\
   }
 
+/// \brief Define a custom exception without extra qualifier.
+# define HPP_MAKE_EXCEPTION_NO_QUALIFIER(TYPE)		\
+  class TYPE : public ::hpp::Exception			\
+  {							\
+  public:						\
+    TYPE (const std::string& message,			\
+	  const std::string& file,			\
+	  unsigned line) throw ()			\
+      : ::hpp::Exception (message, file, line)		\
+      {}						\
+  }
+
 #endif //! HPP_UTIL_EXCEPTION_HH
