@@ -33,6 +33,26 @@
   HPP_KIT_POINTER_DEFS(t);			\
   struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
 
+# define HPP_KIT_DECLARE_CLASS()		    \
+  public: static const CkitClassShPtr CLASS;	    \
+  virtual CkitClassShPtr classObject() const;	    \
+  static CkitObjectShPtr alloc();		    \
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
+
+#define HPP_KIT_DEFINE_CLASS( C )						\
+  const CkitClassShPtr C::CLASS(CkitRuntime::registerClassObject	\
+				(CkitClass::create< C >(#C)));		\
+  CkitClassShPtr C::classObject() const					\
+  {									\
+    KIT_ASSERT( isMemberOfClass(CLASS) );				\
+    return CLASS;							\
+  }									\
+  CkitObjectShPtr C::alloc()						\
+  {									\
+    return CkitObjectShPtr(new C());					\
+  }									\
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
+
 /** Macro used to add a CkcdDetector to the default detector list
  *		\param detectorClass Name of a subclass of CkcdDetector.
  *			This class must define a create() static method that
