@@ -1,5 +1,8 @@
                                                                 -*- outline -*-
 
+New in 0.8, 2013-10-08:
+* Define additionnal Kitelab replacement macros.
+
 New in 0.7, 2013-10-07:
 * Define Kitelab replacement macros to prevent warning triggering. 
 * Improve debug signals behavior to prevent warning triggering.
