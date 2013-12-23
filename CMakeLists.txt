@@ -27,6 +27,12 @@ SET(CXX_DISABLE_WERROR 1)
 
 SETUP_PROJECT()
 
+# Activate logging machinery if requested
+SET (HPP_DEBUG FALSE CACHE BOOL "trigger hpp-util debug output")
+IF (HPP_DEBUG)
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHPP_DEBUG")
+ENDIF()
+
 PKG_CONFIG_APPEND_LIBS("hpp-util")
 
 # Search for Boost.
